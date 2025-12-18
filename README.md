@@ -15,19 +15,19 @@ Although I’m no longer enrolled in ICS3U, I chose to complete class-style proj
 
 This project demonstrates experience with:
 
-Low-level graphics
+•Low-level graphics
 
-Event-driven programming
+•Event-driven programming
 
-Mouse interaction
+•Mouse interaction
 
-Board-game logic
+•Board-game logic
 
-Move validation and game rules
+•Move validation and game rules
 
-Data structures (Vector, arrays, etc.)
+•Data structures (Vector, arrays, etc.)
 
-State tracking and undo systems
+•State tracking and undo systems
 
 **All written in pure Java, no external libraries, inside a single runnable applet.**
 
