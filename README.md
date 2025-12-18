@@ -29,8 +29,8 @@ Data structures (Vector, arrays, etc.)
 
 State tracking and undo systems
 
-**All written in pure Java, no external libraries, inside a single runnable applet.
-**
+**All written in pure Java, no external libraries, inside a single runnable applet.**
+
 
 
 **🚀 Features**
@@ -41,21 +41,20 @@ State tracking and undo systems
 
 ✔️ Game-state tracking:
 
-Turn order
+•Turn order
 
-Check detection
+•Check detection
 
-Checkmate and stalemate
-
+•Checkmate and stalemate
 
 
 ✔️ Special rules implemented:
 
-Castling (both sides, both colours)
+•Castling (both sides, both colours)
 
-Pawn promotion
+•Pawn promotion
 
-En-passant
+•En-passant
 
 
 ✔️ Move-undo system using a history stack (Vector)
@@ -64,11 +63,11 @@ En-passant
 
 ✔️ Button controls:
 
-New Game
+•New Game
 
-Undo Move
+•Undo Move
 
-Reset Board
+•Reset Board
 
 
 
@@ -76,81 +75,91 @@ Reset Board
 
 
 Component	Description
+
 Language	Java (1.4.2 compatible)
+
 UI	AWT Graphics + Applet
+
 Input	MouseListener + ActionListener
+
 Structures	char[][] board, Vector move history
+
 Rendering	Manual board/piece drawing
 
-This runs under Ready to Program, JDK 1.4–8, or any Applet viewer.
+**This runs under Ready to Program, JDK 1.4–8, or any Applet viewer.**
+
+
 
 **📦 How the Game Works**
 
 Board Representation
-char[8][8] board
 
+•char[8][8] board
 
-Uppercase = White pieces
+•Uppercase = White pieces
 
-Lowercase = Black pieces
+•Lowercase = Black pieces
 
-. = empty square
+•. = empty square
 
 Move System
 
-A custom inner class Move stores:
+•A custom inner class Move stores:
 
-From/To coordinates
+•From/To coordinates
 
-Captured piece
+•Captured piece
 
-En-passant flag
+•En-passant flag
 
-Promotion flag
+•Promotion flag
 
-Rook-movement data (for castling)
+•Rook-movement data (for castling)
 
-Previous board state (for undo)
+•Previous board state (for undo)
 
-Rule Checking Includes
+•Rule Checking Includes
 
-In-check calculation
+•In-check calculation
 
-Square-attack scanning
+•Square-attack scanning
 
-Move simulation + undo to verify legality
+•Move simulation + undo to verify legality
+
 
 
 
 **🎯 Why This Project Matters**
 
-This project reflects essential computer-science fundamentals typically covered in ICS3U and beyond.
+This project reflects essential computer science fundamentals typically covered in ICS3U and beyond.
 
 ✔️ Thinking & Problem-Solving
 
-Chess logic
+•Chess logic
 
-Movement algorithms
+•Movement algorithms
 
-Conditional reasoning
+•Conditional reasoning
+
 
 
 ✔️ Algorithmic Design
 
-Directional search (rook/bishop/queen vectors)
+•Directional search (rook/bishop/queen vectors)
 
-Boundary validation
+•Boundary validation
 
-Threat evaluation
+•Threat evaluation
+
 
 
 ✔️ Software Design
 
-Game-state management
+•Game-state management
 
-Undo/rollback logic
+•Undo/rollback logic
 
-Modular rule enforcement
+•Modular rule enforcement
 
 
 ✔️ Independent Learning
@@ -158,13 +167,15 @@ Modular rule enforcement
 **Completed outside of class to prepare for ICS4U and post-secondary programming.**
 
 
+
 **🖥️ Running the Program**
 
-Install Java 8 or lower (for Applet support).
+**Install Java 8 or lower (for Applet support).**
 
 Compile:
 
 javac ChessApplet.java
+
 
 
 Run using:
@@ -180,40 +191,43 @@ appletviewer ChessApplet.java
 
 
 
+
 **🧩 Future Improvements**
 
 Planned upgrades:
 
-Real chess piece images
+•Real chess piece images
 
-PGN output
+•PGN output
 
-Move-highlighting by threat level
+•Move-highlighting by threat level
 
-Basic AI opponent (minimax)
+•**Basic AI opponent (minimax)**
 
 **Stretch goals:**
 
-Network multiplayer
+•Network multiplayer
 
-Rewrite using Swing (Applet-free modern UI)
+•Rewrite using Swing (Applet-free modern UI)
+
 
 
 🏅 Skills Demonstrated
 
-Java OOP fundamentals
+•Java OOP fundamentals
 
-Event-driven programming
+•Event-driven programming
 
-Manual 2D rendering
+•Manual 2D rendering
 
-Game-loop design
+•Game-loop design
 
-Independent project execution
+•Independent project execution
 
-ICS3U curriculum expectations and beyond
+•ICS3U curriculum expectations and beyond
 
 👤 Author
+
 Aadi (Aaditya Dubey)
 Independent CS learner • ICS3U skill showcase • Game development hobbyist
 
