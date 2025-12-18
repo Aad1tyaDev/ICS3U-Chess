@@ -32,6 +32,7 @@ State tracking and undo systems
 **All written in pure Java, no external libraries, inside a single runnable applet.
 **
 
+
 **🚀 Features**
 
 ✔️ Fully playable chess for two human players
@@ -46,6 +47,8 @@ Check detection
 
 Checkmate and stalemate
 
+
+
 ✔️ Special rules implemented:
 
 Castling (both sides, both colours)
@@ -53,6 +56,7 @@ Castling (both sides, both colours)
 Pawn promotion
 
 En-passant
+
 
 ✔️ Move-undo system using a history stack (Vector)
 
@@ -66,7 +70,11 @@ Undo Move
 
 Reset Board
 
-🛠 Tech Used
+
+
+**🛠 Tech Used**
+
+
 Component	Description
 Language	Java (1.4.2 compatible)
 UI	AWT Graphics + Applet
@@ -76,7 +84,8 @@ Rendering	Manual board/piece drawing
 
 This runs under Ready to Program, JDK 1.4–8, or any Applet viewer.
 
-📦 How the Game Works
+**📦 How the Game Works**
+
 Board Representation
 char[8][8] board
 
@@ -111,7 +120,9 @@ Square-attack scanning
 
 Move simulation + undo to verify legality
 
-🎯 Why This Project Matters
+
+
+**🎯 Why This Project Matters**
 
 This project reflects essential computer-science fundamentals typically covered in ICS3U and beyond.
 
@@ -123,6 +134,7 @@ Movement algorithms
 
 Conditional reasoning
 
+
 ✔️ Algorithmic Design
 
 Directional search (rook/bishop/queen vectors)
@@ -130,6 +142,7 @@ Directional search (rook/bishop/queen vectors)
 Boundary validation
 
 Threat evaluation
+
 
 ✔️ Software Design
 
@@ -139,17 +152,20 @@ Undo/rollback logic
 
 Modular rule enforcement
 
+
 ✔️ Independent Learning
 
-Completed outside of class to prepare for ICS4U and post-secondary programming.
+**Completed outside of class to prepare for ICS4U and post-secondary programming.**
 
-🖥️ Running the Program
+
+**🖥️ Running the Program**
 
 Install Java 8 or lower (for Applet support).
 
 Compile:
 
 javac ChessApplet.java
+
 
 Run using:
 
@@ -161,6 +177,7 @@ appletviewer ChessApplet.java
 
 
 **Modern Java removed Applet support, but it still runs fine in legacy environments.**
+
 
 
 **🧩 Future Improvements**
@@ -180,6 +197,7 @@ Basic AI opponent (minimax)
 Network multiplayer
 
 Rewrite using Swing (Applet-free modern UI)
+
 
 🏅 Skills Demonstrated
 
