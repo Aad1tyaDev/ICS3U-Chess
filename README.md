@@ -234,9 +234,7 @@ Planned upgrades:
 
 •ICS3U curriculum expectations and beyond
 
-👤 Author
 
-Aadi (Aaditya Dubey)
 
 Independent CS learner • ICS3U skill showcase • Game development hobbyist
 
