@@ -1,242 +1,81 @@
-# ♟️ ⚠️W.I.P⚠️ Chess♟️
-Fully-playable chess game written in Java (AWT + Applet) as an independent ICS3U-style project. Includes legal move validation, check/checkmate logic, castling, en-passant, promotion, and undo support.
-ors)
+# ♟️ Java Chess (ICS3U Independent Project)
 
+A fully playable two-player chess game written in Java using AWT and the Applet API. Built independently outside of class as a personal challenge and skill showcase, targeting the **Ready to Program** environment used in ICS3U (Grade 11 Computer Science).
 
+---
 
+## Features
 
+- Legal move enforcement for all six piece types
+- Check and checkmate detection
+- Stalemate detection
+- **Special rules:** castling (both sides, both colours), en passant, pawn promotion
+- Undo system backed by a move history stack
+- Click-to-select piece highlighting
+- On-screen status messages for turn tracking and game state
+- Three button controls: **New Game**, **Undo**, **Reset Board**
+- Everything in a single `.java` file with zero external dependencies
 
+---
 
-♟️ Java Chess Game (ICS3U Project – Independent Skill Development)
+## Tech Stack
 
-This repository contains a full chess game implemented in Java 1.4.2 using AWT + Applet, originally designed for the Ready to Program environment used in ICS3U (Grade 11 Computer Science).
+| Component | Details |
+|-----------|---------|
+| Language | Java (1.4.2 compatible) |
+| UI | AWT Graphics + Applet |
+| Input | `MouseListener` + `ActionListener` |
+| Board | `char[8][8]` (uppercase = White, lowercase = Black) |
+| Move History | `Vector` of `Move` objects |
+| Rendering | Manual 2D board and piece drawing |
 
-Although I’m no longer enrolled in ICS3U, I chose to complete class-style projects independently to show initiative, strengthen OOP fundamentals, build problem-solving skills, and demonstrate programming growth.
+---
 
-This project demonstrates experience with:
+## How It Works
 
-•Low-level graphics
+**Board representation:** An 8x8 `char` array where uppercase letters are White pieces and lowercase are Black. Empty squares are stored as `.`.
 
-•Event-driven programming
+**Move system:** A custom `Move` inner class stores everything needed for a move and its undo: source/destination coordinates, captured piece, en passant flag, promotion flag, rook movement data for castling, and the previous board state.
 
-•Mouse interaction
+**Legality checking:** Before any move is committed, the engine simulates it and verifies the moving player's king is not left in check. This covers standard moves, castling paths, and en passant edge cases.
 
-•Board-game logic
+---
 
-•Move validation and game rules
+## Running the Project
 
-•Data structures (Vector, arrays, etc.)
+> Applet support was removed in Java 9+, so you need Java 8 or lower.
 
-•State tracking and undo systems
-
-**All written in pure Java, no external libraries, inside a single runnable applet.**
-
-
-
-
-
-
-
-
-
-
-
-**🚀 Features**
-
-✔️ Fully playable chess for two human players
-
-✔️ Legal move enforcement for all chess pieces
-
-✔️ Game-state tracking:
-
-•Turn order
-
-•Check detection
-
-•Checkmate and stalemate
-
-
-✔️ Special rules implemented:
-
-•Castling (both sides, both colours)
-
-•Pawn promotion
-
-•En-passant
-
-
-✔️ Move-undo system using a history stack (Vector)
-
-✔️ On-screen board drawing with selectable highlight indicators
-
-✔️ Button controls:
-
-•New Game
-
-•Undo Move
-
-•Reset Board
-
-
-
-**🛠 Tech Used**
-
-
-Component	Description
-
-Language	Java (1.4.2 compatible)
-
-UI	AWT Graphics + Applet
-
-Input	MouseListener + ActionListener
-
-Structures	char[][] board, Vector move history
-
-Rendering	Manual board/piece drawing
-
-**This runs under Ready to Program, JDK 1.4–8, or any Applet viewer.**
-
-
-
-**📦 How the Game Works**
-
-Board Representation
-
-•char[8][8] board
-
-•Uppercase = White pieces
-
-•Lowercase = Black pieces
-
-•. = empty square
-
-Move System
-
-•A custom inner class Move stores:
-
-•From/To coordinates
-
-•Captured piece
-
-•En-passant flag
-
-•Promotion flag
-
-•Rook-movement data (for castling)
-
-•Previous board state (for undo)
-
-•Rule Checking Includes
-
-•In-check calculation
-
-•Square-attack scanning
-
-•Move simulation + undo to verify legality
-
-
-
-
-**🎯 Why This Project Matters**
-
-This project reflects essential computer science fundamentals typically covered in ICS3U and beyond.
-
-✔️ Thinking & Problem-Solving
-
-•Chess logic
-
-•Movement algorithms
-
-•Conditional reasoning
-
-
-
-✔️ Algorithmic Design
-
-•Directional search (rook/bishop/queen vectors)
-
-•Boundary validation
-
-•Threat evaluation
-
-
-
-✔️ Software Design
-
-•Game-state management
-
-•Undo/rollback logic
-
-•Modular rule enforcement
-
-
-✔️ Independent Learning
-
-**Completed outside of class to prepare for ICS4U and post-secondary programming.**
-
-
-
-**🖥️ Running the Program**
-
-**Install Java 8 or lower (for Applet support).**
-
-Compile:
-
+**1. Compile:**
+```bash
 javac ChessApplet.java
+```
 
+**2. Run with an applet viewer:**
+```bash
+appletviewer ChessApplet.html
+```
 
+Or open it directly in **Ready to Program**.
 
-Run using:
+---
 
-Ready to Program, or
+## Planned Improvements
 
-An Applet viewer:
+- Real chess piece images instead of text characters
+- Move highlighting by threat level
+- Basic AI opponent using minimax
+- PGN (Portable Game Notation) export
+- Swing rewrite to drop the legacy Applet dependency
+- Network multiplayer (stretch goal)
 
-appletviewer ChessApplet.java
+---
 
+## Why I Built This
 
-**Modern Java removed Applet support, but it still runs fine in legacy environments.**
+I dropped ICS3U mid-semester to make room for another course, but still wanted to complete the core projects independently. Chess is one of the more complex game-logic challenges at this level, involving recursive state simulation, directional search algorithms, and careful edge case handling. Building it without any class guidance was a good test of everything I'd been learning on my own.
 
+---
 
+## License
 
-
-**🧩 Future Improvements**
-
-Planned upgrades:
-
-•Real chess piece images
-
-•PGN output
-
-•Move-highlighting by threat level
-
-•**Basic AI opponent (minimax)**
-
-**Stretch goals:**
-
-•Network multiplayer
-
-•Rewrite using Swing (Applet-free modern UI)
-
-
-
-🏅 Skills Demonstrated
-
-•Java OOP fundamentals
-
-•Event-driven programming
-
-•Manual 2D rendering
-
-•Game-loop design
-
-•Independent project execution
-
-•ICS3U curriculum expectations and beyond
-
-
-
-Independent CS learner • ICS3U skill showcase • Game development hobbyist
-
-📝 License
-MIT License — free to use, modify, and build upon.
+MIT License. Free to use, modify, and build on.
